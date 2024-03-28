@@ -179,6 +179,10 @@ button:hover {
     background: linear-gradient(to right, rgb(206, 70, 97), hsla(30, 100%, 70%, 1));
 }
 
+.hide {
+    display: none;
+}
+
 
 /* mobile design */
 
@@ -322,5 +326,8 @@ button:hover {
     }
     .subscribe h1 {
         width: 200px;
+    }
+    .hide {
+        display: none;
     }
 }
