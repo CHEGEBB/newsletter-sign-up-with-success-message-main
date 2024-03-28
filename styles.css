@@ -14,7 +14,7 @@ p {
     font-weight: 400;
 }
 
-.container {
+.card1 {
     background-color: hsl(0, 0%, 100%);
     width: 700px;
     height: 450px;
@@ -162,7 +162,7 @@ button:hover {
     margin-top: -10px;
 }
 
-button {
+#dismiss button {
     background-color: hsl(235, 18%, 26%);
     color: hsl(0, 0%, 100%);
     border: none;
@@ -191,7 +191,7 @@ button:hover {
         font-family: 'Roboto', sans-serif;
         overflow-x: hidden;
     }
-    .container {
+    .card1 {
         width: 100%;
         height: 900px;
         display: flex;
@@ -311,7 +311,7 @@ button:hover {
         margin-left: 10px;
         margin-top: 50px;
     }
-    button {
+    #dismiss button {
         width: 300px;
         margin-left: 10px;
         margin-top: 140px;
