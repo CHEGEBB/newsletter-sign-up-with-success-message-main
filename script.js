@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const card2 = document.querySelector('.card2');
     const dismissButton = document.querySelector('.card2 button[type="dismiss"]');
     const emailInput = document.querySelector('#email');
+    const confirmationEmail = document.querySelector('.subscribe strong');
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (isValidEmail(email)) {
             card1.classList.add('hide');
             card2.classList.remove('hide');
+            confirmationEmail.textContent = email;
             removeErrorMessage();
         } else {
             displayErrorMessage();
@@ -24,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function isValidEmail(email) {
-        // Regular expression for email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     }
@@ -37,12 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
             errorMessage.classList.add('error-message');
             errorMessage.textContent = 'Valid email required';
             emailInput.parentNode.appendChild(errorMessage);
-            //position the error message on the top right of the input field
             const rect = emailInput.getBoundingClientRect();
             errorMessage.style.top = `${rect.top}px`;
             errorMessage.style.left = `${rect.right + 10}px`;
-
-
         }
         errorMessage.style.display = 'block';
         emailInput.style.borderColor = 'hsla(10, 100%, 70%, 1)';
@@ -52,9 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function removeErrorMessage() {
         const errorMessage = document.getElementById('email-error');
         if (errorMessage) {
-            errorMessage.style.display = 'none'; // Hide error message
+            errorMessage.style.display = 'none';
             errorMessage.remove();
-            emailInput.style.borderColor = ''; // Reset border color
+            emailInput.style.borderColor = '';
         }
     }
 });
