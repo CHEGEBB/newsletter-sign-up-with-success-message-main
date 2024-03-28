@@ -162,7 +162,7 @@ button:hover {
     margin-top: -10px;
 }
 
-#dismiss button {
+.btn button {
     background-color: hsl(235, 18%, 26%);
     color: hsl(0, 0%, 100%);
     border: none;
